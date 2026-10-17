@@ -1,87 +1,34 @@
 <!DOCTYPE html>
 <html lang="tr">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Sefa Gümüş — web yazılımı, modern arayüzler ve kişisel özgeçmiş.">
-  <meta name="theme-color" content="#101426">
-  <title>Sefa Gümüş | Web Yazılımı</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
-    :root{--bg:#101426;--panel:#171d33;--text:#f4f6ff;--muted:#a4acc4;--purple:#9b8cff;--cyan:#62e3d2;--line:rgba(255,255,255,.1)}
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{margin:0;min-height:100vh;padding:52px 22px;color:var(--text);background:radial-gradient(ellipse at 10% 4%,rgba(107,94,255,.24),transparent 34rem),radial-gradient(ellipse at 95% 90%,rgba(47,196,178,.14),transparent 30rem),var(--bg);font:16px/1.75 'DM Sans',sans-serif}
-    .page{width:min(100%,920px);margin:auto}
-    .topline{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px;color:var(--muted);font-size:.72rem;font-weight:700;letter-spacing:.17em;text-transform:uppercase}
-    .status{display:inline-flex;align-items:center;gap:9px;letter-spacing:.08em}
-    .status::before{content:'';width:8px;height:8px;border-radius:50%;background:var(--cyan);box-shadow:0 0 14px var(--cyan)}
-    .card{position:relative;overflow:hidden;padding:clamp(28px,7vw,68px);border:1px solid var(--line);border-radius:28px;background:linear-gradient(145deg,rgba(28,35,61,.96),rgba(20,25,44,.96));box-shadow:0 28px 90px rgba(0,0,0,.34)}
-    .card::before{content:'';position:absolute;top:-140px;right:-100px;width:330px;height:330px;border:1px solid rgba(155,140,255,.2);border-radius:50%;box-shadow:0 0 0 35px rgba(155,140,255,.035),0 0 0 72px rgba(155,140,255,.025);pointer-events:none}
-    header{position:relative;padding:12px 0 36px;border-bottom:1px solid var(--line)}
-    .eyebrow{margin:0 0 12px;color:var(--cyan);font-size:.75rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase}
-    h1{margin:0;font:800 clamp(2.8rem,9vw,5.7rem)/1.02 'Manrope',sans-serif;letter-spacing:-.075em}
-    h1 span{color:var(--purple)}
-    .subtitle{margin:18px 0 0;color:var(--muted);font-size:1.02rem}
-    .intro{max-width:690px;margin:28px 0 0;color:#d3d8e8;font-size:1.08rem}
-    strong{color:#fff}
-    section{padding:29px 0;border-bottom:1px solid var(--line)}
-    h2{display:flex;align-items:center;gap:12px;margin:0 0 18px;font:700 1.08rem 'Manrope',sans-serif;letter-spacing:.01em}
-    h2 .index{color:var(--cyan);font:700 .72rem 'DM Sans',sans-serif;letter-spacing:.12em}
-    .skills{display:flex;flex-wrap:wrap;gap:10px;margin:0;padding:0;list-style:none}
-    .skills li{padding:9px 14px;border:1px solid rgba(155,140,255,.22);border-radius:999px;background:rgba(155,140,255,.08);color:#e5e2ff;font-size:.9rem;transition:transform .2s,border-color .2s}
-    .skills li:hover{transform:translateY(-2px);border-color:var(--purple)}
-    abbr{border:0;text-decoration:none;font-weight:700}
-    .timeline{display:grid;gap:0;margin:0;padding:0;list-style:none}
-    .timeline li{position:relative;padding:0 0 18px 23px;color:#e0e4f1}
-    .timeline li:last-child{padding-bottom:0}
-    .timeline li::before{content:'';position:absolute;top:9px;left:0;width:8px;height:8px;border:2px solid var(--purple);border-radius:50%;background:var(--panel)}
-    .timeline li:not(:last-child)::after{content:'';position:absolute;top:21px;bottom:0;left:5px;width:1px;background:linear-gradient(var(--purple),transparent)}
-    .current{color:var(--cyan);font-size:.76rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
-    .contact{display:flex;flex-wrap:wrap;gap:12px 30px;color:var(--muted);font-style:normal}
-    .contact span{display:inline-flex;align-items:center;gap:9px}
-    .contact b{color:var(--text);font-weight:600}
-    footer{display:flex;justify-content:space-between;gap:14px;padding-top:24px;color:var(--muted);font-size:.8rem}
-    time{color:#d8dced}
-    @media(max-width:560px){body{padding:25px 14px}.topline{font-size:.62rem}.card{padding:27px 22px;border-radius:21px}.intro{font-size:1rem}footer{flex-direction:column;gap:4px}}
-    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important}}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Sefa Gümüş | Kişisel Özgeçmiş</title>
+    <meta name="description" content="HTML, CSS, JavaScript vb. Yeni başlıyorum / Öğrenciyim ">
+    <link rel="icon" href="favicon.png" type="image/x-icon">
 </head>
+
 <body>
-  <main class="page">
-    <div class="topline"><span>Kişisel portfolyo</span><span class="status">Gelişmeye devam ediyor</span></div>
-    <article class="card">
-      <header>
-        <p class="eyebrow">Merhaba, ben</p>
-        <h1>Sefa <span>Gümüş</span></h1>
-        <p class="subtitle">Web Yazılımı Mühendisliği Öğrencisi <span aria-hidden="true">·</span> Antalya</p>
-        <p class="intro">Yaratıcı ve çözüm odaklı bir web yazılımı mühendisiyim. Modern web teknolojileriyle kullanıcı dostu arayüzler geliştirmek en büyük tutkum.</p>
-      </header>
-      <section aria-labelledby="skills-title">
-        <h2 id="skills-title"><span class="index">01</span> Teknik yetenekler</h2>
-        <ul class="skills">
-          <li><abbr title="HyperText Markup Language">HTML</abbr>5 &amp; Semantik Web</li>
-          <li><abbr title="Cascading Style Sheets">CSS</abbr>3 &amp; Modern Tasarım</li>
-          <li>Algoritmik düşünme</li>
-        </ul>
-      </section>
-      <section aria-labelledby="education-title">
-        <h2 id="education-title"><span class="index">02</span> Eğitim geçmişi</h2>
-        <ol class="timeline">
-          <li>Leader Coders Web Yazılımı Mühendisliği Kampı <span class="current">· Devam ediyor</span></li>
-          <li>Anadolu Lisesi</li>
-          <li>Niğde Ömer Halisdemir Üniversitesi</li>
-        </ol>
-      </section>
-      <section aria-labelledby="contact-title">
-        <h2 id="contact-title"><span class="index">03</span> İletişim</h2>
-        <address class="contact">
-          <span><b>Konum</b> Bilişim Vadisi, Muratpaşa / Antalya</span>
-          <span><b>E-posta</b> gsefa5683gmail.com</span>
-        </address>
-      </section>
-      <footer><span>Sefa Gümüş · Kişisel özgeçmiş</span><span>Son güncelleme: <time datetime="2026-10-15">15 Ekim 2026</time></span></footer>
-    </article>
-  </main>
+    <h1>Sefa Gümüş</h1>
+    <h3>Hakkımda</h3>
+    <p>Merhaba , ben yaratıcı ve çözüm odaklı <strong>Web Yazılım Mühendisiyim </strong> <br>
+        Modern web teknolojileri kullanarak kullanıcı dostu arayüzler geliştirmek en büyük tutkum.ç</p>
+    <h3>Teknik Yeteneklerim </h3>
+    <ul>
+        <li><abbr title="HyperText Markup Language">HTML </abbr>5 ve Semantik Web </li>
+        <li> <abbr title="Cascading Style Sheets">CSS</abbr>3 ve Modern Tasarım </li>
+        <li>Algoritma Düşünme</li>
+    </ul>
+    <h3>Eğitim Geçmişim</h3>
+    <ol>
+        <li>Leader Coders Web Yazılımı Mühendisliği Kampı (Devam Ediyor)</li>
+        <li>Andaolu Lisesi</li>
+        <li>Niğde Ömer Halis Demir Üniversitesi </li>
+    </ol>
+    <h3>Bana Ulaşın</h3>
+    <address>Bilişim Vadisi Muratpaşa/Antalya <br> E-posta: gsefa5683gmail.com</address>
+    <p> <em>Son Güncelleme : <time datetime="10.15.2026">15 Ekim 2026</time></em> </p>
 </body>
+
 </html>
